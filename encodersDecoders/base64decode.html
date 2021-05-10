@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoders/Decoders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+    <div class ="topnav" id ="myTopnav">
+        <a href="../index.html">UTILITY APPS</a>
+        <div class = "appmenu">
+        <div class="dropdown">
+            <button class="dropbtn">Encoder/Decoders
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="encoderDecoder.html">Url Encode/Decode</a>
+              <a href="base64encode.html">Base64 Encode</a>
+              <a href="#">Base64 Decode</a>
+              <a href="md5hashgenerator.html">MD5 Hash Generator</a>
+              <a href="sha1hashgenerator.html">SHA-1 Hash Generator</a>
+              <a href="sha256generator.html">SHA-256 Hash Generator</a>
+              <a href="sha512generator.html">SHA-512 Generator</a>
+            </div>
+            </div>
+        <a href="/numberBaseConverters/numberBaseConverter.html">NumberBase</a>
+        <a href="/rgbHexConverter/rgbHexConverter.html">RGB HEX</a>
+        <a href="/textToolStringUtilities/stringUtilities.html">Text/String Utilities</a>
+        <a href="/unitConverters/unitConverter.html">Unit</a>
+        <a href="/timeStampConverter/timeStampConverter.html">TimeStamp</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+      <div class = "urlEncodeDecodeContainer">
+        <textarea class="encodeDecodeUrlItem" name="encodeDecodeInput" id="encodeDecodeInput" rows="15" cols="25" placeholder="Enter the text that you wish to encode or decode."></textarea>
+        <textarea class="encodeDecodeUrlItem" name="encodeDecodeInput" id="encodeDecodeOutput" rows="15" cols="25" placeholder="Your results will appear here." disabled=""></textarea>
+      </div>
+      <div class = "encoders-decoders">
+          <button class = "btn-encoders-decoders">Base64Decode</button>
+          <button class = "btn-encoders-decoders">Reset</button>
+      </div>
+      <script>
+        function myFunction() {
+          let x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</body>
+</html>

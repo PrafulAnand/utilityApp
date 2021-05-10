@@ -171,13 +171,12 @@ a {
   box-shadow: 5px 5px 5px grey;
 }
 
-.btn-encode-decode {
+.encoders-decoders {
   padding: 50px 0;
   text-align: center;
 }
 
-.encode,
-.decode {
+.btn-encoders-decoders {
   padding: 10px;
   font-size: small;
   margin: 10px;
