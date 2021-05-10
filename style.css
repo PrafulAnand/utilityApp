@@ -165,14 +165,14 @@ a {
 
 .encodeDecodeUrlItem {
   border: 1px solid rgba(0, 0, 0, 0.8);
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
   padding: 0 20px;
   box-shadow: 5px 5px 5px grey;
 }
 
 .encoders-decoders {
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
 }
 
