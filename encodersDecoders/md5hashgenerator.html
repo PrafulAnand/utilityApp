@@ -23,7 +23,7 @@
               <a href="#">MD5 Hash Generator</a>
               <a href="sha1hashgenerator.html">SHA-1 Hash Generator</a>
               <a href="sha256generator.html">SHA-256 Hash Generator</a>
-              <a href="sha512generator.html">SHA-512 Generator</a>
+              <a href="sha512generator.html">SHA-512 Hash Generator</a>
             </div>
             </div>
         <a href="/numberBaseConverters/numberBaseConverter.html">NumberBase</a>
@@ -40,8 +40,8 @@
         <textarea class="encodeDecodeUrlItem" name="encodeDecodeInput" id="encodeDecodeOutput" rows="15" cols="35" placeholder="Your results will appear here." disabled=""></textarea>
       </div>
       <div class = "encoders-decoders">
-        <button class = "btn-encoders-decoders">Generate MD-5 Hash</button>
-        <button class = "btn-encoders-decoders">Reset</button>
+        <button class = "btn-encoders-decoders" id = "generateMD5Hash">Generate MD-5 Hash</button>
+        <button class = "btn-encoders-decoders" id = "reset">Reset</button>
     </div>
       <script>
         function myFunction() {
@@ -53,5 +53,7 @@
           }
         }
         </script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+        <script src ="../app.js"></script>
 </body>
 </html>
