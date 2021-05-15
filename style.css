@@ -160,7 +160,8 @@ a {
   grid-template-columns: auto auto;
   justify-content: center;
   align-content: center;
-  height: 60vh;
+  padding:50px;
+  margin:50px
 }
 
 .encodeDecodeUrlItem,.numberBaseConverterItem {
