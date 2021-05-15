@@ -19,7 +19,7 @@ const decimalToOctal= document.querySelector("#decimalOctal");
 const decimaltoHex= document.querySelector("#decimalHex");
 const hexToBinary= document.querySelector("#hexBinary");
 const hextoDecimal= document.querySelector("#hexDecimal");
-const hexToOctal= document.querySelector("#hexOctal");
+const hextoOctal= document.querySelector("#hexOctal");
 const octalToBinary= document.querySelector("#octalBinary");
 const octalToDecimal= document.querySelector("#octalDecimal");
 const octalToHex= document.querySelector("#octalHex");
@@ -193,7 +193,7 @@ if (typeof (hextoOctal) != 'undefined' && hextoOctal != null) {
             utilityConverterOutput.disabled = false;
             utilityConverterOutput.value = parseInt(utilityConverterInput.value,16).toString(8);
         }  else {
-            alert("Please enter a Hex value to get Decimal Value");
+            alert("Please enter a Hex value to get Octal Value");
         }
     }
 }
@@ -230,6 +230,42 @@ if (typeof (octalToHex) != 'undefined' && octalToHex != null) {
             utilityConverterOutput.value = parseInt(utilityConverterInput.value,8).toString(16);
         } else {
             alert("Please enter a octal value to get Hex Value");
+        }
+    }
+}
+
+/*decimal to binary */
+if (typeof (decimalToBinary) != 'undefined' && decimalToBinary != null) {
+    decimalToBinary.onclick = () => {
+        if (utilityConverterInput.value !== "") {
+            utilityConverterOutput.disabled = false;
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value).toString(2);
+        } else {
+            alert("Please enter a Decimal value to get Binary Value");
+        }
+    }
+}
+
+/*decimal to hex */
+if (typeof (decimaltoHex) != 'undefined' && decimaltoHex != null) {
+    decimaltoHex.onclick = () => {
+        if (utilityConverterInput.value !== "") {
+            utilityConverterOutput.disabled = false;
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value).toString(16);
+        } else {
+            alert("Please enter a Decimal value to get Hex Value");
+        }
+    }
+}
+
+/*decimal to octal */
+if (typeof (decimalToOctal) != 'undefined' && decimalToOctal != null) {
+    decimalToOctal.onclick = () => {
+        if (utilityConverterInput.value !== "") {
+            utilityConverterOutput.disabled = false;
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value).toString(8);
+        } else {
+            alert("Please enter a Decimal value to get Octal Value");
         }
     }
 }
