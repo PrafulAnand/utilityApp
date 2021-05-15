@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NumberBase Converter-Binary to Decimal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="../index.html">UTILITY APPS</a>
+    <div class="appmenu">
+      <div class="dropdown">
+        <button class="dropbtn">Encoder/Decoders
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/encodersDecoders/encoderDecoder.html">Url Encode/Decode</a>
+          <a href="/encodersDecoders/base64encode.html">Base64 Encode</a>
+          <a href="/encodersDecoders/base64decode.html">Base64 Decode</a>
+          <a href="/encodersDecoders/md5hashgenerator.html">MD5 Hash Generator</a>
+          <a href="/encodersDecoders/sha1hashgenerator.html">SHA-1 Hash Generator</a>
+          <a href="/encodersDecoders/sha256generator.html">SHA-256 Hash Generator</a>
+          <a href="/encodersDecoders/sha512generator.html">SHA-512 Generator</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">NumberBase
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="BinarytoDecimal.html">Binary-&gt;Decimal</a>
+          <a href="BinarytoHex.html">Binary-&gt;Hex</a>
+          <a href="#">Binary-&gt;Octal</a>
+          <a href="DecimaltoBinary.html">Decimal-&gt;Binary</a>
+          <a href="DecimaltoHex.html">Decimal-&gt;Hex</a>
+          <a href="DecimaltoOctal.html">Decimal-&gt;Octal</a>
+          <a href="HextoBinary.html">Hex-&gt;Binary</a>
+          <a href="HextoDecimal.html">Hex-&gt;Decimal</a>
+          <a href="HextoOctal.html">Hex-&gt;Octal</a>
+          <a href="OctaltoBinary.html">Octal-&gt;Binary</a>
+          <a href="OctaltoDecimal.html">Octal-&gt;Decimal</a>
+          <a href="OctaltoHex.html">Octal-&gt;Hex</a>
+        </div>
+      </div>
+      <a href="/rgbHexConverter/rgbHexConverter.html">RGB HEX</a>
+      <a href="/textToolStringUtilities/stringUtilities.html">Text/String Utilities</a>
+      <a href="/unitConverters/unitConverter.html">Unit</a>
+      <a href="/timeStampConverter/timeStampConverter.html">TimeStamp</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  <div class="numberBaseConverterContainer">
+    <textarea class="numberBaseConverterItem" name="numberBaseConverterInput" id="binaryOctalInput" rows="15"
+      cols="35" placeholder="Enter the Binary value here."></textarea>
+    <textarea class="numberBaseConverterItem" name="numberBaseConverterOutput" id="binaryOctalOutput" rows="15"
+      cols="35" placeholder="Your Octal value will appear here." disabled=""></textarea>
+  </div>
+  <div class="numberBaseConverters">
+    <button class="btn-utility" id="binaryDecimal">Binary To Octal</button>
+    <button class="btn-utility" id="reset">Reset</button>
+  </div>
+  <script>
+    function myFunction() {
+      let x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+</body>
+
+</html>

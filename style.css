@@ -154,7 +154,7 @@ a {
 
 /* encode decoder styling*/
 
-.urlEncodeDecodeContainer {
+.urlEncodeDecodeContainer,.numberBaseConverterContainer {
   display: grid;
   grid-gap: 50px 100px;
   grid-template-columns: auto auto;
@@ -163,7 +163,7 @@ a {
   height: 60vh;
 }
 
-.encodeDecodeUrlItem {
+.encodeDecodeUrlItem,.numberBaseConverterItem {
   border: 1px solid rgba(0, 0, 0, 0.8);
   font-size: 15px;
   text-align: center;
@@ -171,12 +171,12 @@ a {
   box-shadow: 5px 5px 5px grey;
 }
 
-.encoders-decoders {
+.encoders-decoders,.numberBaseConverters {
   padding: 20px 0;
   text-align: center;
 }
 
-.btn-encoders-decoders {
+.btn-encoders-decoders,.btn-utility {
   padding: 10px;
   font-size: small;
   margin: 10px;
