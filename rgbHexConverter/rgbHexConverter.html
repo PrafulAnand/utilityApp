@@ -54,16 +54,38 @@
     </div>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
-  <div class="numberBaseConverterContainer">
-    <textarea class="numberBaseConverterItem" name="numberBaseConverterInput" id="utilityConverterInput" rows="15"
-      cols="35" placeholder="Enter the Binary value here."></textarea>
-    <textarea class="numberBaseConverterItem" name="numberBaseConverterOutput" id="utilityConverterOutput" rows="15"
-      cols="35" placeholder="Your decimal value will appear here." disabled=""></textarea>
-  </div>
-  <div class="numberBaseConverters">
-    <button class="btn-utility" id="binaryDecimal">Binary To Decimal</button>
-    <button class="btn-utility" id="reset">Reset</button>
-  </div>
+  <section class = "rgb-hex-converter">
+    <div class = "rgb-hex-converters" id = "rgbHex">
+      <h1>RGB to HEX Color Conversion</h1>
+        <h2 class="red">Red</h2>
+        <input type="text" class="input-color" id="red-input" value="" placeholder="Red(values from 0 to 255)">
+        <h2 class="green">Green</h2>
+        <input type="text" class="input-color" id="green-input" value="" placeholder="Green(values from 0 to 255)">
+        <h2 class="blue">Blue</h2>
+        <input type="text" class="input-color" id="blue-input" value="" placeholder="Blue(values from 0 to 255)">
+        <h2 class = "hex">HEX value</h2>
+        <input type="text" class="input-color" id="hexValue" value="" placeholder="Your HEX value here" disabled="">
+        <div class="rgb-hex-buttons-layout">
+          <button class = "rgb-hex-buttons" id = "hexOutput">Get HEX Value</button>
+        <button class = "rgb-hex-buttons" id = "showHexRgb">HEX to RGB</button>
+        </div>
+    </div>
+<div class = "hide" id = "hexRgb">
+  <h1>HEX to RGB Color Conversion</h1>
+  <h2 class = "hex">HEX value</h2>
+        <input type="text" class="input-color" id="hexValue" value="" placeholder="Hex(values from 000000 to ffffff)">
+        <div class="rgb-hex-buttons-layout">
+          <button class = "rgb-hex-buttons" id = "rgbOutput">Get RGB Value</button>
+        <button class = "rgb-hex-buttons" id = "showRgbHex">RGB to HEX</button>
+        </div>
+        <h2 class="red">Red</h2>
+        <input type="text" class="input-color" id="red-input" value="" placeholder="Red(values from 0 to 255)">
+        <h2 class="green">Green</h2>
+        <input type="text" class="input-color" id="green-input" value="" placeholder="Green(values from 0 to 255)">
+        <h2 class="blue">Blue</h2>
+        <input type="text" class="input-color" id="blue-input" value="" placeholder="Blue(values from 0 to 255)">
+</div>
+  </section>
   <script>
     function myFunction() {
       let x = document.getElementById("myTopnav");
@@ -76,5 +98,4 @@
   </script>
   <script src="../app.js"></script>
 </body>
-
 </html>

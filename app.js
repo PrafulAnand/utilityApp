@@ -24,6 +24,11 @@ const octalToBinary= document.querySelector("#octalBinary");
 const octalToDecimal= document.querySelector("#octalDecimal");
 const octalToHex= document.querySelector("#octalHex");
 
+const rgbHex = document.querySelector("#rgbHex");
+const hexrgb = document.querySelector("#hexRgb");
+const showHexRgbButton = document.querySelector("#showHexRgb");
+const showRgbHexButton = document.querySelector("#showRgbHex");
+
 
 /*encode decode url */
 
@@ -268,4 +273,23 @@ if (typeof (decimalToOctal) != 'undefined' && decimalToOctal != null) {
             alert("Please enter a Decimal value to get Octal Value");
         }
     }
+}
+
+/*RGB HEX */
+if(typeof (showHexRgbButton) != 'undefined' && showHexRgbButton != null){
+    showHexRgbButton.onclick = () => {
+        rgbHex.classList.add("hide");
+        hexrgb.classList.remove("hide");
+        hexrgb.classList.add("rgb-hex-converters");
+        window.scrollTo(0,0);
+    }
+}
+
+if(typeof (showRgbHexButton) != 'undefined' && showRgbHexButton != null){
+        showRgbHexButton.onclick = () => {
+        hexrgb.classList.add("hide");
+        rgbHex.classList.remove("hide");
+        rgbHex.classList.add("rgb-hex-converters");
+        window.scrollTo(0,0);
+        }
 }

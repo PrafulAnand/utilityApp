@@ -40,6 +40,8 @@ a {
 .topnav {
   overflow: hidden;
   background-color: #333;
+  position: sticky;
+  top: 0;
 }
 
 .topnav a {
@@ -52,10 +54,6 @@ a {
   font-size: 17px;
 }
 
-.active {
-  background-color: #04aa6d;
-  color: white;
-}
 
 .topnav .icon {
   display: none;
@@ -67,7 +65,7 @@ a {
 }
 
 .dropdown .dropbtn {
-  font-size: 15px;
+  font-size: 17px;
   border: none;
   outline: none;
   color: white;
@@ -81,7 +79,6 @@ a {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -111,7 +108,7 @@ a {
   display: block;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 980px) {
   .topnav a:not(:first-child),
   .dropdown .dropbtn {
     display: none;
@@ -122,7 +119,7 @@ a {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 980px) {
   .topnav.responsive {
     position: relative;
   }
@@ -177,7 +174,7 @@ a {
   text-align: center;
 }
 
-.btn-encoders-decoders,.btn-utility {
+.btn-encoders-decoders,.btn-utility,.rgb-hex-buttons{
   padding: 10px;
   font-size: small;
   margin: 10px;
@@ -191,4 +188,52 @@ textarea:disabled {
   cursor: not-allowed;
   background-color: #eee;
   opacity: 1;
+}
+
+.rgb-hex-converters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.input-color{
+  height: 80px;
+  width: 50%;
+  margin: 20px;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.input-color::placeholder{
+  opacity: 0.2;
+  color:black;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+
+.blue{
+  color: blue;
+}
+
+.rgb-hex-buttons-layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+
+.hide{
+  display: none;
+}
+
+.hex-rgb{
+  display: none;
 }
