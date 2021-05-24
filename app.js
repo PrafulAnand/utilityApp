@@ -293,6 +293,7 @@ if (typeof (showHexRgbButton) != 'undefined' && showHexRgbButton != null) {
         hexrgb.classList.remove("hide");
         hexrgb.classList.add("rgb-hex-converters");
         window.scrollTo(0, 0);
+        document.querySelector("#rgb-hex-converter-section").style.backgroundColor = "";
     }
 }
 
@@ -302,6 +303,7 @@ if (typeof (showRgbHexButton) != 'undefined' && showRgbHexButton != null) {
         rgbHex.classList.remove("hide");
         rgbHex.classList.add("rgb-hex-converters");
         window.scrollTo(0, 0);
+        document.querySelector("#rgb-hex-converter-section").style.backgroundColor = "";
     }
 }
 
