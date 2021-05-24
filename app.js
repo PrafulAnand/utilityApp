@@ -13,22 +13,33 @@ const generateSHA512Hash = document.querySelector("#generateSHA512Hash");
 
 const binaryToDecimal = document.querySelector("#binaryDecimal");
 const binaryToOctal = document.querySelector("#binaryOctal");
-const binaryToHex= document.querySelector("#binaryHex");
-const decimalToBinary= document.querySelector("#decimalBinary");
-const decimalToOctal= document.querySelector("#decimalOctal");
-const decimaltoHex= document.querySelector("#decimalHex");
-const hexToBinary= document.querySelector("#hexBinary");
-const hextoDecimal= document.querySelector("#hexDecimal");
-const hextoOctal= document.querySelector("#hexOctal");
-const octalToBinary= document.querySelector("#octalBinary");
-const octalToDecimal= document.querySelector("#octalDecimal");
-const octalToHex= document.querySelector("#octalHex");
+const binaryToHex = document.querySelector("#binaryHex");
+const decimalToBinary = document.querySelector("#decimalBinary");
+const decimalToOctal = document.querySelector("#decimalOctal");
+const decimaltoHex = document.querySelector("#decimalHex");
+const hexToBinary = document.querySelector("#hexBinary");
+const hextoDecimal = document.querySelector("#hexDecimal");
+const hextoOctal = document.querySelector("#hexOctal");
+const octalToBinary = document.querySelector("#octalBinary");
+const octalToDecimal = document.querySelector("#octalDecimal");
+const octalToHex = document.querySelector("#octalHex");
 
 const rgbHex = document.querySelector("#rgbHex");
 const hexrgb = document.querySelector("#hexRgb");
 const showHexRgbButton = document.querySelector("#showHexRgb");
 const showRgbHexButton = document.querySelector("#showRgbHex");
-
+const redInput = document.querySelector("#redInput");
+const greenInput = document.querySelector("#greenInput");
+const blueInput = document.querySelector("#blueInput");
+const hexOutputVal = document.querySelector("#hexOutputVal");
+const hexOutputBtn = document.querySelector("#hexOutputBtn");
+const rgbOutputBtn = document.querySelector("#rgbOutput");
+const resetRgbHexValuesbtn = document.querySelector("#resetRgbHexValues");
+const redOutput = document.querySelector("#redOutput");
+const greenOutput = document.querySelector("#greenOutput");
+const blueOutput = document.querySelector("#blueOutput");
+const hexInput = document.querySelector("#hexInput");
+const resetHexRgbValues = document.querySelector("#resetHexRgbValues");
 
 /*encode decode url */
 
@@ -56,9 +67,9 @@ if (typeof (decode) != 'undefined' && decode != null) {
 /*reset */
 if (typeof (reset) != 'undefined' && reset != null) {
     reset.onclick = () => {
-       utilityConverterOutput.value = "";
-       utilityConverterOutput.disabled = true;
-       utilityConverterInput.value = "";
+        utilityConverterOutput.value = "";
+        utilityConverterOutput.disabled = true;
+        utilityConverterInput.value = "";
     }
 }
 
@@ -135,8 +146,8 @@ if (typeof (binaryToDecimal) != 'undefined' && binaryToDecimal != null) {
     binaryToDecimal.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,2);
-        }  else {
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 2);
+        } else {
             alert("Please enter a Binary value to get Decimal Value");
         }
     }
@@ -147,8 +158,8 @@ if (typeof (binaryToHex) != 'undefined' && binaryToHex != null) {
     binaryToHex.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,2).toString(16);
-        }  else {
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 2).toString(16);
+        } else {
             alert("Please enter a Binary value to get hex Value");
         }
     }
@@ -159,8 +170,8 @@ if (typeof (binaryToOctal) != 'undefined' && binaryToOctal != null) {
     binaryToOctal.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,2).toString(8);
-        }  else {
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 2).toString(8);
+        } else {
             alert("Please enter a Binary value to get octal Value");
         }
     }
@@ -171,8 +182,8 @@ if (typeof (hexToBinary) != 'undefined' && hexToBinary != null) {
     hexToBinary.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,16).toString(2);
-        }  else {
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 16).toString(2);
+        } else {
             alert("Please enter a Hex value to get Binary Value");
         }
     }
@@ -184,8 +195,8 @@ if (typeof (hextoDecimal) != 'undefined' && hextoDecimal != null) {
     hextoDecimal.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,16);
-        }  else {
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 16);
+        } else {
             alert("Please enter a Hex value to get Decimal Value");
         }
     }
@@ -196,8 +207,8 @@ if (typeof (hextoOctal) != 'undefined' && hextoOctal != null) {
     hextoOctal.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,16).toString(8);
-        }  else {
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 16).toString(8);
+        } else {
             alert("Please enter a Hex value to get Octal Value");
         }
     }
@@ -208,7 +219,7 @@ if (typeof (octalToDecimal) != 'undefined' && octalToDecimal != null) {
     octalToDecimal.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,8);
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 8);
         } else {
             alert("Please enter a octal value to get Decimal Value");
         }
@@ -220,7 +231,7 @@ if (typeof (octalToBinary) != 'undefined' && octalToBinary != null) {
     octalToBinary.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,8).toString(2);
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 8).toString(2);
         } else {
             alert("Please enter a octal value to get Binary Value");
         }
@@ -232,7 +243,7 @@ if (typeof (octalToHex) != 'undefined' && octalToHex != null) {
     octalToHex.onclick = () => {
         if (utilityConverterInput.value !== "") {
             utilityConverterOutput.disabled = false;
-            utilityConverterOutput.value = parseInt(utilityConverterInput.value,8).toString(16);
+            utilityConverterOutput.value = parseInt(utilityConverterInput.value, 8).toString(16);
         } else {
             alert("Please enter a octal value to get Hex Value");
         }
@@ -276,20 +287,84 @@ if (typeof (decimalToOctal) != 'undefined' && decimalToOctal != null) {
 }
 
 /*RGB HEX */
-if(typeof (showHexRgbButton) != 'undefined' && showHexRgbButton != null){
+if (typeof (showHexRgbButton) != 'undefined' && showHexRgbButton != null) {
     showHexRgbButton.onclick = () => {
         rgbHex.classList.add("hide");
         hexrgb.classList.remove("hide");
         hexrgb.classList.add("rgb-hex-converters");
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
     }
 }
 
-if(typeof (showRgbHexButton) != 'undefined' && showRgbHexButton != null){
-        showRgbHexButton.onclick = () => {
+if (typeof (showRgbHexButton) != 'undefined' && showRgbHexButton != null) {
+    showRgbHexButton.onclick = () => {
         hexrgb.classList.add("hide");
         rgbHex.classList.remove("hide");
         rgbHex.classList.add("rgb-hex-converters");
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
+    }
+}
+
+
+if (typeof (hexOutputBtn) != 'undefined' && hexOutputBtn != null) {
+    hexOutputBtn.onclick = () => {
+        if (redInput.value.match("[0-9]") && greenInput.value.match("[0-9]") && blueInput.value.match("[0-9]") &&
+         redInput.value != null && blueInput.value != null && greenInput.value != null) {
+            hexOutputVal.disabled = false
+            hexOutputVal.value = rgbToHex(parseInt(red.value), parseInt(green.value), parseInt(blue.value));
+            document.querySelector("#rgb-hex-converter-section").style.backgroundColor = hex.value;
         }
+        else {
+            alert("Please enter valid rgb values to get a valid Hex value");
+        }
+    }
+}
+
+if (typeof (rgbOutputBtn) != 'undefined' && rgbOutputBtn != null) {
+    rgbOutputBtn.onclick = () => {
+        if (hexInput.value != null && hexInput.value!= "") {
+            redOutput.disabled = false;
+            greenOutput.disabled =  false;
+            blueOutput.disabled =  false
+            hexInput.value = hexInput.value.startsWith("#")?hexInput.value.substring(1):hexInput.value;
+            const bigint = parseInt(hexInput.value, 16);
+            redOutput.value = (bigint >> 16) & 255;
+            greenOutput.value = (bigint >> 8) & 255;
+            blueOutput.value = bigint & 255;
+            document.querySelector("#rgb-hex-converter-section").style.backgroundColor = "rgb(" + redOutput.value + "," + greenOutput.value + "," + blueOutput.value + ")";
+        }
+        else {
+            alert("Please enter valid hex value to get a valid red , green , blue values");
+        }
+    }
+}
+
+const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
+    const hexv = x.toString(16)
+    console.log(hexv);
+    return hexv.length === 1 ? '0' + hexv : hexv
+}).join('')
+
+
+if (typeof (resetRgbHexValuesbtn) != 'undefined' && resetRgbHexValuesbtn != null) {
+    resetRgbHexValuesbtn.onclick = () => {
+        redInput.value = "";
+        greenInput.value = "";
+        blueInput.value = "";
+        hexOutputVal.value = "";
+        hexOutputBtn.disabled = true;
+    document.querySelector("#rgb-hex-converter-section").style.backgroundColor = "";
+}
+}
+if (typeof (resetHexRgbValues) != 'undefined' && resetHexRgbValues != null) {
+    resetHexRgbValues.onclick = () => {
+        redOutput.value = "";
+        redOutput.disabled = true;
+        greenOutput.value = "";
+        greenOutput.disabled = true;
+        blueOutput.value = "";
+        blueOutput.disabled = true;
+        hexInput.value = "";
+    document.querySelector("#rgb-hex-converter-section").style.backgroundColor = "";
+}
 }

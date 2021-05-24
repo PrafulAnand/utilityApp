@@ -54,36 +54,38 @@
     </div>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
-  <section class = "rgb-hex-converter">
+  <section id = "rgb-hex-converter-section">
     <div class = "rgb-hex-converters" id = "rgbHex">
       <h1>RGB to HEX Color Conversion</h1>
         <h2 class="red">Red</h2>
-        <input type="text" class="input-color" id="red-input" value="" placeholder="Red(values from 0 to 255)">
+        <input type="text" class="input-color" id="redInput" value="" placeholder="Red(values from 0 to 255)" maxlength="3">
         <h2 class="green">Green</h2>
-        <input type="text" class="input-color" id="green-input" value="" placeholder="Green(values from 0 to 255)">
+        <input type="text" class="input-color" id="greenInput" value="" placeholder="Green(values from 0 to 255)" maxlength="3">
         <h2 class="blue">Blue</h2>
-        <input type="text" class="input-color" id="blue-input" value="" placeholder="Blue(values from 0 to 255)">
+        <input type="text" class="input-color" id="blueInput" value="" placeholder="Blue(values from 0 to 255)" maxlength="3">
         <h2 class = "hex">HEX value</h2>
-        <input type="text" class="input-color" id="hexValue" value="" placeholder="Your HEX value here" disabled="">
+        <input type="text" class="input-color" id="hexOutputVal" value="" placeholder="Your HEX value here" disabled="">
         <div class="rgb-hex-buttons-layout">
-          <button class = "rgb-hex-buttons" id = "hexOutput">Get HEX Value</button>
+          <button class = "rgb-hex-buttons" id = "hexOutputBtn">Get HEX Value</button>
         <button class = "rgb-hex-buttons" id = "showHexRgb">HEX to RGB</button>
+        <button class="btn-utility" id="resetRgbHexValues">Reset</button>
         </div>
     </div>
 <div class = "hide" id = "hexRgb">
   <h1>HEX to RGB Color Conversion</h1>
   <h2 class = "hex">HEX value</h2>
-        <input type="text" class="input-color" id="hexValue" value="" placeholder="Hex(values from 000000 to ffffff)">
+        <input type="text" class="input-color" id="hexInput" value="" placeholder="Hex(values from 000000 to ffffff)" maxlength="7">
         <div class="rgb-hex-buttons-layout">
           <button class = "rgb-hex-buttons" id = "rgbOutput">Get RGB Value</button>
         <button class = "rgb-hex-buttons" id = "showRgbHex">RGB to HEX</button>
+        <button class="btn-utility" id="resetHexRgbValues">Reset</button>
         </div>
         <h2 class="red">Red</h2>
-        <input type="text" class="input-color" id="red-input" value="" placeholder="Red(values from 0 to 255)">
+        <input type="text" class="input-color" id="redOutput" value="" placeholder="Red(values from 0 to 255)" maxlength="3">
         <h2 class="green">Green</h2>
-        <input type="text" class="input-color" id="green-input" value="" placeholder="Green(values from 0 to 255)">
+        <input type="text" class="input-color" id="greenOutput" value="" placeholder="Green(values from 0 to 255)" maxlength="3">
         <h2 class="blue">Blue</h2>
-        <input type="text" class="input-color" id="blue-input" value="" placeholder="Blue(values from 0 to 255)">
+        <input type="text" class="input-color" id="blueOutput" value="" placeholder="Blue(values from 0 to 255)" maxlength="3">
 </div>
   </section>
   <script>
