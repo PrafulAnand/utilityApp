@@ -309,13 +309,13 @@ if (typeof (showRgbHexButton) != 'undefined' && showRgbHexButton != null) {
 if (typeof (hexOutputBtn) != 'undefined' && hexOutputBtn != null) {
     hexOutputBtn.onclick = () => {
         if (redInput.value.match("[0-9]") && greenInput.value.match("[0-9]") && blueInput.value.match("[0-9]") &&
-         redInput.value != null && blueInput.value != null && greenInput.value != null) {
+         redInput.value != "" && blueInput.value != "" && greenInput.value != "") {
             hexOutputVal.disabled = false
             hexOutputVal.value = rgbToHex(parseInt(red.value), parseInt(green.value), parseInt(blue.value));
             document.querySelector("#rgb-hex-converter-section").style.backgroundColor = hex.value;
         }
         else {
-            alert("Please enter valid rgb values to get a valid Hex value");
+            alert("Please enter all valid rgb values to get a valid Hex value");
         }
     }
 }
