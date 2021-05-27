@@ -314,8 +314,8 @@ if (typeof (hexOutputBtn) != 'undefined' && hexOutputBtn != null) {
         if (redInput.value.match("[0-9]") && greenInput.value.match("[0-9]") && blueInput.value.match("[0-9]") &&
          redInput.value != "" && blueInput.value != "" && greenInput.value != "") {
             hexOutputVal.disabled = false
-            hexOutputVal.value = rgbToHex(parseInt(red.value), parseInt(green.value), parseInt(blue.value));
-            document.querySelector("#rgb-hex-converter-section").style.backgroundColor = hex.value;
+            hexOutputVal.value = rgbToHex(parseInt(redInput.value), parseInt(greenInput.value), parseInt(blueInput.value));
+            document.querySelector("#rgb-hex-converter-section").style.backgroundColor = hexOutputVal.value;
         }
         else {
             alert("Please enter all valid rgb values to get a valid Hex value");
