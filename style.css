@@ -246,11 +246,11 @@ textarea:disabled {
 }
 
 
-.ipAddressContainer {
+.ipAddressContainer,.ipAddressContainer>h2,.ipAddressContainer>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  padding: 50px;
+  font-size: 30px;
+  padding: 20px;
 }
