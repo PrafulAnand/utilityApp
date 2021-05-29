@@ -16,22 +16,28 @@ header {
   grid-gap: 50px 100px;
   justify-content: center;
   align-content: center;
+  padding-top: 50px;
+  padding-left:30px;
+  padding-right:30px;
 }
 
 .grid-item {
   background-color: #333;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.9);
   font-size: 20px;
   text-align: center;
   padding: 0 20px;
   box-shadow: 5px 5px 5px grey;
 }
 
-a {
+.grid-item>h4{
+  padding: 10px 20px;
+}
+
+.grid-item>h4>a {
   text-decoration: none;
   font-weight: bold;
   color: white;
-  padding: 20px;
 }
 
 /* nav bar styling */
