@@ -9,7 +9,8 @@ const generateMD5Hash = document.querySelector("#generateMD5Hash");
 const generateSHA1Hash = document.querySelector("#generateSHA1Hash");
 const generateSHA256Hash = document.querySelector("#generateSHA256Hash");
 const generateSHA512Hash = document.querySelector("#generateSHA512Hash");
-const ipAddress = document.querySelector("#ipAddress");
+const ipV4 = document.querySelector("#ipv4");
+const ipV6 = document.querySelector("#ipv6");
 
 
 const binaryToDecimal = document.querySelector("#binaryDecimal");
@@ -372,7 +373,12 @@ if (typeof (resetHexRgbValues) != 'undefined' && resetHexRgbValues != null) {
 }
 }
 
-if(typeof(ipAddress) != 'undefined' && ipAddress!= null){
+if(typeof(ipv4) != 'undefined' && ipv4!= null){
    fetch("https://api.ipify.org/?format=json").then(response => response.json()).then(data=>
-        ipAddress.innerHTML = data.ip);
+        ipv4.innerHTML = data.ip);
 }
+
+if(typeof(ipv6) != 'undefined' && ipv6!= null){
+    fetch("https://api64.ipify.org/?format=json").then(response => response.json()).then(data=>
+         ipv6.innerHTML = data.ip);
+ }
