@@ -251,7 +251,12 @@ textarea:disabled {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px;
-  font-size: 20px;
-  width: 100%
+  padding:50px
+}
+
+
+@media screen and (max-width:500px) {
+  .ipAddressContainer {
+    align-items: stretch;
+  }
 }
