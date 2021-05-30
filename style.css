@@ -268,3 +268,20 @@ textarea:disabled {
     grid-template-columns: auto auto auto;
   }
 }
+
+
+.translateContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-direction: row;
+  padding: 50px;
+}
+
+.translate-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  align-items: center;
+  justify-content: space-around;
+}

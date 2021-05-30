@@ -43,6 +43,12 @@ const blueOutput = document.querySelector("#blueOutput");
 const hexInput = document.querySelector("#hexInput");
 const resetHexRgbValues = document.querySelector("#resetHexRgbValues");
 
+const langTextInput = document.querySelector("#translateInput");
+const langTextOutput = document.querySelector("#translateOutput");
+const selectLangInput=document.querySelector("#inputLang");
+const selectLangOutput=document.querySelector("#outputLang");
+const translateBtn = document.querySelector("#translateLanguage");
+
 /*encode decode url */
 
 if (typeof (encode) != 'undefined' && encode != null) {
@@ -382,3 +388,17 @@ if(typeof(ipv6) != 'undefined' && ipv6!= null){
     fetch("https://api64.ipify.org/?format=json").then(response => response.json()).then(data=>
          ipv6.innerHTML = data.ip);
  }
+
+
+ const translatedTextOutput = function(inputText,langSymbolInput,langSymbolOutput){
+     const params = new URLSearchParams();
+     params.append("q",inputText);
+     params.append("langpair", langSymbolInput + "|" + langSymbolOutput);
+     let url = `https://api.mymemory.translated.net/get?${params.toString()}`;
+     console.log(url);
+     fetch(url)
+     .then(response => response.json())
+     .then(data => {langTextOutput.value = data.responseData.translatedText});
+ }
+
+ console.log(translatedTextOutput("hello Praful!","en","de"));
