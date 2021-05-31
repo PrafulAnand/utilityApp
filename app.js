@@ -390,7 +390,15 @@ if(typeof(ipv6) != 'undefined' && ipv6!= null){
  }
 
 
- const translatedTextOutput = function(inputText,langSymbolInput,langSymbolOutput){
+ if(typeof(translateBtn)!='undefined' && translateBtn!= null){
+     translateBtn.onclick = () =>{
+     let inputText = langTextInput.value;
+     let sourcLang = selectLangInput.value;
+     let destlang = selectLangOutput.value;
+     translatedTextOutput(inputText,sourcLang,destlang);
+ }
+}
+function translatedTextOutput(inputText,langSymbolInput,langSymbolOutput){
      const params = new URLSearchParams();
      params.append("q",inputText);
      params.append("langpair", langSymbolInput + "|" + langSymbolOutput);
@@ -401,4 +409,4 @@ if(typeof(ipv6) != 'undefined' && ipv6!= null){
      .then(data => {langTextOutput.value = data.responseData.translatedText});
  }
 
- console.log(translatedTextOutput("hello Praful!","en","de"));
+//  console.log(translatedTextOutput("hello Praful!","en","de"));
